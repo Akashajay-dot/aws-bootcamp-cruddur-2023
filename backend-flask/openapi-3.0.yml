@@ -149,8 +149,26 @@ paths:
                 items:
                   $ref: '#/components/schemas/Message'
 
+  /api/activities/notifications:
+    get:
+      description: 'return the user based notifations' 
+      tags:
+        - activities
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Activity  '
+
+
 components:
   schemas:
+
     Activity:
       type: object
       properties:
